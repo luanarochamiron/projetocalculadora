@@ -218,21 +218,154 @@ class Operacao:
     def exercicio3(self, num1, num2):
         return num1 * num2
 
+    def exercicio5(self, num1, num2, num3, num4):
+        branco = (100 * num2) / num1
+        nulo = (100 * num3) / num1
+        valido = (100 * num4) / num1
+
+        return (f'O percentual dos votos brancos :{branco}\n'
+                f'O percentual dos votos nulos   :{nulo}\n'
+                f'O percentual dos votos valido  :{valido}\n')
+
+
     def exercicio4(self, num1, num2,num3):
         idade = (num1 * 365) + (num2 * 30) + num3
         return idade
 
     # exercicio 5 lista 2
-    def transformar(self, num, num4):
-        percentual = (num / num4) * 100
-        return percentual
 
-    def exercicio5(self, num1, num2, num3, num4):
-        # Verificar se o total é igual a brancos, validos e nulos
-        if ((num1 + num2 + num3) == num4):
-            transformar(num1, num4) == self.brancos
-            transformar(num2, num4) == self.nulos
-            transformar(num3, num4) == self.validos
-            return 'Votos Brancos: {}%\nVotos Nulos: {}%\nVotos Validos: {}%'.format(self.brancos, self.nulos, self.validos)
+    def exercicio7(self, num1):
+        num2 = num1 * 0.28
+        num3 = num1 * 0.45
+        soma = num2 + num3
+        return soma
+
+    def exercicio8(self, num1,num2,num3):
+        soma = num1 + num2 + num3
+        media = soma / 3
+        return media
+
+    def exercicio9(self, num1):
+        if num1 <= 12:
+            valor = num1 * 1.30
+        else:
+            valor = num1 * 1
+        return valor
+
+    def exercicio010(self, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10):
+        valores = [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10]
+        valores_unicos = list(set(valores))
+        valores_unicos.sort()
+
+        return valores_unicos
+    def exercicio012(self, num1,num2,num3,num4):
+        num4 = (num1 - num2) + num3
+        if num4 < 0:
+            return f'Saldo negativo'
+        else:
+            return f'Saldo Positivo'
+
+    def exercicio011(self, num1,num2):
+        if num1 <= 1500:
+            num1 * 0.03
+        else:
+            num1 > 1500 * 0.05
+        soma = num1 + num2
+        return soma
 
 
+    def exercicio014(self,num1):
+        lista = []
+        for i in range (1, num1 + 1):
+            lista.append(i)
+        return lista
+
+    def exercicio015(self, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10):
+        neg = 0
+        for num in [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10]:
+            if num < 0:
+                neg += 1
+        return f'{neg} números negativos'
+
+    def exercicio016(self, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10):
+        numeros = [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10]
+
+        soma = sum(numero for numero in numeros if numero < 40)
+
+        return soma
+
+    def exercicio017(self):
+        soma = sum(range(15, 100 + 1))
+        quantidade = 100 - 15 + 1
+        media = soma / quantidade
+        return f"A média aritmética dos números  entre 15 e 101 é {media}"
+
+    def exercicio018(self, num1):
+        quant = num1
+        soma = 0
+        maior = float('-inf')
+
+        for i in range(quant):
+            num = int(input("Informe um número: "))
+            if num > maior:
+                maior = num
+            soma += num
+
+        media = soma / quant
+
+        return (f'O maior número: {maior}\n'
+                f'A média dos números é: {media:.2f}\n')
+
+    def exercicio019(self, num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num14,
+                    num15, num16, num17, num18, num19, num20):
+
+        notas = [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10,
+                 num11, num12, num13, num14, num15, num16, num17, num18, num19, num20]
+
+        soma = sum(notas)
+
+        media = soma / len(notas)
+
+        acimaMedia = sum(1 for nota in notas if nota > media)
+
+        return (f'A média da turma: {media:.2f}\n'
+                f'Quantidade de alunos com nota acima da média: {acimaMedia}')
+
+    def exercicio020(self):
+        soma_salarios = 0
+        soma_filhos = 0
+        maior_salario = float('-inf')
+        contagem = 0
+        contagem_salario_baixo = 0
+
+        while True:
+            salario = float(input("Digite o salário: "))
+
+            if salario < 0:
+                break
+
+            filhos = int(input("Digite a quantidade de filhos: "))
+
+            soma_salarios += salario
+            soma_filhos += filhos
+            contagem += 1
+
+        if salario > maior_salario:
+            maior_salario = salario
+
+        if salario < 150:
+            contagem_salario_baixo += 1
+
+        if contagem > 0:
+            media_salarios = soma_salarios / contagem
+            media_filhos = soma_filhos / contagem
+            percentual_salario_baixo = (contagem_salario_baixo / contagem) * 100
+        else:
+            media_salarios = 0
+            media_filhos = 0
+            percentual_salario_baixo = 0
+
+        return (f"Média do salário: R$ {media_salarios:.2f}\n"
+                f"Média  de filhos: {media_filhos:.2f}\n"
+                f"Maior salário dos habitantes: R$ {maior_salario:.2f}\ns"
+                f"Percentual de pessoas com salário menor que R$ 150,00: {percentual_salario_baixo:.2f}%")

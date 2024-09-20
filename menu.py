@@ -39,11 +39,26 @@ class Menu:
               '\n24. exercício 18'              +
               '\n25. exercício 19'              +
               '\n26. exercício 20'              +
-              '\n27. exercício 1'               +
-              '\n28. exercício 2'               +
-              '\n29. exercício 3'               +
-              '\n30. exercício 4'               +
-              '\n31. exercicio 5')
+              '\n27. Lista 2 exercício 1'               +
+              '\n28. Lista 2 exercício 2'               +
+              '\n29. Lista 2 exercício 3'               +
+              '\n30. Lista 2 exercício 4'               +
+              '\n31. Lista 2 exercicio 5'               +
+              '\n32. Lista 2 exercicio 6'               +
+              '\n33. Lista 2 exercicio 7'               +
+              '\n34. Lista 2 exercicio 8'               +
+              '\n35. Lista 2 exercicio 9'               +
+              '\n36. Lista 2 exercicio 10'               +
+              '\n37. Lista 2 exercicio 11'               +
+              '\n38. Lista 2 exercicio 12'               +
+              '\n39. Lista 2 exercicio 13'               +
+              '\n40. Lista 2 exercicio 14'               +
+              '\n41. Lista 2 exercicio 15'               +
+              '\n42. Lista 2 exercicio 16'               +
+              '\n43. Lista 2 exercicio 17'               +
+              '\n44. Lista 2 exercicio 18'               +
+              '\n45. Lista 2 exercicio 19'               +
+              '\n46. Lista 2 exercicio 20'               )
 
     def coletar(self):
          self.num1 = int(input("Informe o primeiro número: "))
@@ -61,6 +76,60 @@ class Menu:
         self.num2 = int(input("Informe sua idade em meses: "))
         self.num3 = int(input("Informe sua idade em dias: "))
 
+    def votos(self):
+        self.num1 = int(input("Informe quantos votos no total: "))
+        self.num2 = int(input("Informe quantos votos em branco: "))
+        self.num3 = int(input("Informe quantos votos em nulo: "))
+        self.num4 = int(input("Informe quantos votos válidos: "))
+
+    def valores(self):
+        self.num1 = int(input("Informe o primeiro número: "))
+        self.num2 = int(input("Informe o segundo número: "))
+        self.num3 = int(input("Informe o terceiro número: "))
+        self.num4 = int(input("Informe o quarto número: "))
+        self.num5 = int(input("Informe o quinto número: "))
+        self.num6 = int(input("Informe o sexto número: "))
+        self.num7 = int(input("Informe o sétimo número: "))
+        self.num8 = int(input("Informe o oitavo número: "))
+        self.num9 = int(input("Informe o nono número: "))
+        self.num10 = int(input("Informe o décimo número: "))
+
+    def neg(self):
+        self.num1 = int(input("Informe o primeiro número: "))
+        self.num2 = int(input("Informe o segundo número: "))
+        self.num3 = int(input("Informe o terceiro número: "))
+        self.num4 = int(input("Informe o quarto número: "))
+        self.num5 = int(input("Informe o quinto número: "))
+        self.num6 = int(input("Informe o sexto número: "))
+        self.num7 = int(input("Informe o sétimo número: "))
+        self.num8 = int(input("Informe o oitavo número: "))
+        self.num9 = int(input("Informe o nono número: "))
+        self.num10 = int(input("Informe o décimo número: "))
+
+    def quanti(self):
+        self.num1 = int(input("Informe a quantidade de números: "))
+
+    def numeros(self):
+        self.num1 = int(input("Informe o primeiro número: "))
+        self.num2 = int(input("Informe o segundo número: "))
+        self.num3 = int(input("Informe o terceiro número: "))
+        self.num4 = int(input("Informe o quarto número: "))
+        self.num5 = int(input("Informe o quinto número: "))
+        self.num6 = int(input("Informe o sexto número: "))
+        self.num7 = int(input("Informe o sétimo número: "))
+        self.num8 = int(input("Informe o oitavo número: "))
+        self.num9 = int(input("Informe o nono número: "))
+        self.num10 = int(input("Informe o décimo número: "))
+        self.num11 = int(input("Informe o décimo primeiro número: "))
+        self.num12 = int(input("Informe o décimo segundo número: "))
+        self.num13 = int(input("Informe o décimo terceiro número: "))
+        self.num14 = int(input("Informe o décimo quarto número: "))
+        self.num15 = int(input("Informe o décimo quinto número: "))
+        self.num16 = int(input("Informe o décimo sexto número: "))
+        self.num17 = int(input("Informe o décimo sétimo número: "))
+        self.num18 = int(input("Informe o décimo oitavo número: "))
+        self.num19 = int(input("Informe o décimo nono número: "))
+        self.num20 = int(input("Informe o vigéssimo número: "))
 
     def operacao(self):
         while self.opcao != 0:
@@ -190,10 +259,73 @@ class Menu:
                 print(f' A idade em dias é {self.opera.exercicio4(self.num1, self.num2,self.num3)}')
 
             elif self.opcao == 31:
-                self.num1 = int(input('Informe o total de votos brancos: '))
-                self.num2 = int(input('Informe o total de votos nulos: '))
-                self.num3 = int(input('Informe o total de votos Validos: '))
-                self.num4 = int(input('Informe o total de eleitores: '))
-                print(self.opera.exercicio5(self.num1 , self.num2, self.num3, self.num4))
+                self.votos()
+                print(f'\n  {self.opera.exercicio5(self.num1, self.num2, self.num3, self.num4)}')
 
 
+            elif self.opcao == 33:
+                self.num1  = int(input('Informe o custo de fábrica do carro: '))
+                print(f'O custo do carro para o consumidor é de: {self.opera.exercicio7(self.num1)}')
+
+            elif self.opcao == 34:
+                self.num1 = int(input("Informe a primeira nota: "))
+                self.num2 = int(input("Informe a segunda nota: "))
+                self.num3 = int(input("Informe a terceira nota: "))
+                print(f' A média do aluno é de {self.opera.exercicio8(self.num1,self.num2,self.num3)}')
+
+            elif self.opcao == 35:
+                self.num1 = int(input("Informe o número de maças: "))
+                print(f' O valor que tem que ser pago será de {self.opera.exercicio9(self.num1)}')
+
+
+            elif self.opcao == 36:
+                self.valores()
+                print(
+                    f'\n  {self.opera.exercicio010(self.num1, self.num2, self.num3, self.num4, self.num5, self.num6, self.num7, self.num8, self.num9, self.num10)}')
+
+
+            elif self.opcao == 37:
+                self.num1 = int(input("Informe o valor da comissão: "))
+                self.num2 = int(input("Informe o valor do salario: "))
+                print(f'O valor que o funcionario deverá receber é de: {self.opera.exercicio011(self.num1, self.num2)}')
+
+            elif self.opcao == 38:
+                self.num1 = int(input("Informe o saldo da conta: "))
+                self.num2 = int(input("Informe o débito: "))
+                self.num3 = int(input("Informe o crédito: "))
+                print(self.opera.exercicio012(self.num1,self.num2,self.num3,self.num4))
+
+
+
+
+            elif self.opcao == 40:
+                self.num1 = int(input("Informe um número: "))
+                print(self.opera.exercicio014(self.num1))
+
+            elif self.opcao == 41:
+                self.neg()
+                print(
+                    f'\n  {self.opera.exercicio015(self.num1, self.num2, self.num3, self.num4, self.num5, self.num6, self.num7, self.num8, self.num9, self.num10)}')
+
+            elif self.opcao == 42:
+                self.neg()
+                print(
+                    f'A soma dos numeros menores que 40 é: \n  {self.opera.exercicio016(self.num1, self.num2, self.num3, self.num4, self.num5, self.num6, self.num7, self.num8, self.num9, self.num10)}')
+
+
+            elif self.opcao == 43:
+                print(f'\n  {self.opera.exercicio017()}')
+
+            elif self.opcao == 44:
+                self.quanti()
+                print(f'\n  {self.opera.exercicio018(self.num1)}')
+
+
+            elif self.opcao == 45:
+                self.numeros()
+                print(
+                    f'\n  {self.opera.exercicio019(self.num1, self.num2, self.num3, self.num4, self.num5, self.num6, self.num7, self.num8, self.num9, self.num10, self.num11, self.num12, self.num13, self.num14, self.num15, self.num16, self.num17, self.num18, self.num19, self.num20)}')
+
+
+            elif self.opcao == 46:
+                print(f'\n  {self.opera.exercicio020()}')
